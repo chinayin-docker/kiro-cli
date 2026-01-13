@@ -1,5 +1,5 @@
 variable "version" {
-  default = "latest"
+  default = ""
 }
 
 variable "repo" {
@@ -31,6 +31,6 @@ target "alpine" {
   inherits = ["_all_platforms"]
   context  = "alpine"
   tags     = [
-    "${repository}:${version}",
+    "${repository}:latest",
   ]
 }
